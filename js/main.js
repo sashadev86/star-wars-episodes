@@ -1,3 +1,5 @@
+import { preloader } from './preloader.js';
+
 const cssPromises = {};
 
 function loadResource(src) {
@@ -28,9 +30,17 @@ const appContainer = document.getElementById('app');
 const searchParams = new URLSearchParams(location.search);
 const film = searchParams.get('film');
 
+
 export function renderPage(moduleName, apiUrl, css, normalize) {
+  appContainer.style.backgroundImage = '';
+  appContainer.style.height = '0';
+  appContainer.innerHTML = '';
+  const loader = preloader();
+  document.body.appendChild(loader);
+
   Promise.all([moduleName, apiUrl, css, normalize].map((src) => loadResource(src))).then(
     ([pageModule, data]) => {
+      document.body.removeChild(loader);
       appContainer.innerHTML = '';
       appContainer.append(pageModule.render(data));
     }

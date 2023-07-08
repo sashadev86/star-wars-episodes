@@ -101,6 +101,7 @@ export function render(data) {
   buttonBack.addEventListener('click', e => {
     e.preventDefault();
     window.history.back();
+
     renderPage(
       '../js/film-list.js',
       `https://swapi.dev/api/films`,
