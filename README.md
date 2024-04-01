@@ -1,7 +1,7 @@
 # Каталог эпизодов Star wars.
 
 ##### Ссылка на деплой:
-- [Каталог эпизодов Star wars](https://banditos86.github.io/star-wars-episodes/ 'Каталог эпизодов Star wars')
+- [Каталог эпизодов Star wars](https://sashadev86.github.io/star-wars-episodes/ 'Каталог эпизодов Star wars')
 
 ---
 
